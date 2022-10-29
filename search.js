@@ -4,19 +4,19 @@ const cherrio = require("cheerio")
 module.exports = async (req,res) => {
 
     try{
-        const response = await axios.get('https://www.jadwalsholat.org/')
+        // const response = await axios.get('https://www.jadwalsholat.org/')
 
-        const $ = cherrio.load(response.data)
+        // const $ = cherrio.load(response.data)
 
-        // console.log($.html())
+        // // console.log($.html())
 
-        const htmlParse = $.html()
+        // const htmlParse = $.html()
 
-        console.log("test", $.find(".table_header"))
+        // console.log("test", $.find(".table_header"))
 
-        // console.log($.html())
+        // // console.log($.html())
 
-        res.json($)
+        res.json({message: "hayo ngapain disini"})
 
     }catch(err){
 
