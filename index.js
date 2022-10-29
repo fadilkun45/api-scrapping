@@ -3,6 +3,7 @@ const cors = require('cors')
 const quoteController = require('./quote')
 const pixiv = require('./pixiv')
 const search = require('./search')
+const serverless = require('serverless-http')
 
 const app = express()
 
@@ -23,5 +24,6 @@ app.get('/search', search)
 
 
 app.listen(4500)
+module.exports.handler = serverless(app)
 
 
