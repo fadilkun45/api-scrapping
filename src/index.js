@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const quoteController = require('./quote')
 const pixiv = require('./pixiv')
-const search = require('./search')
+const search = require('../search')
 const serverless = require('serverless-http')
 
 const app = express()
