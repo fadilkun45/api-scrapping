@@ -24,4 +24,6 @@ app.get('/search', search)
 
 
 app.listen(4500)
-module.exports.handler = serverless(app)
+
+
+module.exports = app
