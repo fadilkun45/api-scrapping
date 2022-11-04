@@ -10,9 +10,12 @@ module.exports = async (req,res) => {
 
     console.log(req.query.search)
 
+
+
        try{
         const response = await  axios.get(`https://www.tokopedia.com/s/jadwal-sholat/${search}`)
         const $ = cheerio.load(response.data)
+
 
         const el = $(".unf-card")
 
@@ -47,7 +50,10 @@ module.exports = async (req,res) => {
 
         // console.log(tgl)
 
-        res.status(200).json(tgl)
+        res.status(200).json({
+            daerah: $('.css-kt3twr').text(),
+            jadwalSholat: tgl
+        })
 
 
        }catch(err){
